@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogIn</title>
+
+  <link rel="stylesheet" href="./src/auth/login/login.css">
+  <link rel="icon" type="image/png" href="./src/assets/logo.svg">
+</head>
+<body>
+
+<div id="container">
+  <picture id="logo">
+    <img class="logo__picture" src="./src/assets/logo.svg" alt="">
+
+  </picture>
+
+  <div class="form__container">
+
+    <br>
+    <h1>BelgSoft</h1><br>
+
+    <p>Bienvenido a BelgSoft</p><br>
+
+    <form>
+
+      <input class="input" type="text" placeholder="Correo" name="username">
+
+      <input class="input" type="password" placeholder="Contraseña" name="password">
+
+      <p class="text__forgot">
+        <a class="forgot__password" href="">
+          <small>¿Olvidaste tu contraseña?</small>
+        </a>
+      </p>
+
+      <input class="login__button" type="submit" value="Iniciar sesión">
+    </form>
+
+    <p class="container__or">
+      <span class="text">O</span>
+    </p><br>
+
+    <div class="signUp__container">
+      <p>¿Nuevo usuario?</p>
+      <a href="./src/auth/register/register.html">Crear cuenta</a>
+    </div>
+
+  </div>
+</div>
+</body>
 </html>
