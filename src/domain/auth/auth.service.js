@@ -22,7 +22,9 @@ export const authenticateUser = async (email, password) => {
 
     // Check if there are errors
     if (response.error) {
-        return response;
+        return {
+            serverError: response.error
+        };
     }
 
     return {
