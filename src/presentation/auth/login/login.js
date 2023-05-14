@@ -14,11 +14,13 @@ loginForm.addEventListener('submit', async (event) => {
     // Response from the domain
     const response = await authenticateUser(email, password);
 
+    // Domain error
     if (response.error) {
         document.getElementById('error__message').innerHTML = response.error;
         return;
     }
 
+    // Server error
     if (response.serverError) {
         document.getElementById('error__message').innerHTML = getValidationError(response.serverError);
         return;
