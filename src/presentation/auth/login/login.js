@@ -1,4 +1,5 @@
 import {authenticateUser} from "../../../domain/auth/auth.service";
+import {getValidationError} from "../utils/get-validation-error";
 
 const loginForm = document.getElementById('login-form');
 
@@ -15,5 +16,14 @@ loginForm.addEventListener('submit', async (event) => {
 
     if (response.error) {
         document.getElementById('error__message').innerHTML = response.error;
+        return;
     }
+
+    if (response.serverError) {
+        document.getElementById('error__message').innerHTML = getValidationError(response.serverError);
+        return;
+    }
+
+    // save the token in the local storage
+    localStorage.setItem('token', response.token);
 });
