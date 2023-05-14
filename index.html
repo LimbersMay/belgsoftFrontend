@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LogIn</title>
 
-  <link rel="stylesheet" href="./src/auth/login/login.css">
+  <link rel="stylesheet" href="src/presentation/auth/login/login.css">
   <link rel="icon" type="image/png" href="./src/assets/logo.svg">
 </head>
 <body>
@@ -24,11 +24,12 @@
 
     <p>Bienvenido a BelgSoft</p><br>
 
-    <form>
+    <form id="login-form">
 
-      <input class="input" type="text" placeholder="Correo" name="username">
+      <div id="error__message"></div>
+      <input class="input" id="email" type="text" placeholder="Correo" name="username">
 
-      <input class="input" type="password" placeholder="Contraseña" name="password">
+      <input class="input" id="password" type="password" placeholder="Contraseña" name="password">
 
       <p class="text__forgot">
         <a class="forgot__password" href="">
@@ -45,9 +46,10 @@
 
     <div class="signUp__container">
       <p>¿Nuevo usuario?</p>
-      <a href="./src/auth/register/register.html">Crear cuenta</a>
+      <a href="src/presentation/auth/register/register.html">Crear cuenta</a>
     </div>
 
+    <script type="module" src="src/presentation/auth/login/login.js"></script>
   </div>
 </div>
 </body>
