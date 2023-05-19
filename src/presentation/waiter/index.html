@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu principal</title>
+    <link rel="preload" href="normalize.css" as="style">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="styles.css" as="style">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <section class="container">
+        <h1>La tía de <span>Kaua</span></h1>
+        <div class="center-logo">
+            <img class="logo" src="assets/TiaKaua.jpeg" alt="Logo la tía de Kaua">
+        </div>
+    </section>
+    <!-- hamburguer icon and navigation menu -->
+    <section>
+        <img class="hamburger" src="assets/amburguesa.svg" alt="imagen">
+        <nav class="navigation-menu">
+            <a href="#">Usuario</a>
+            <a href="#">Menu</a>
+            <a href="#">Pedidos</a>
+        </nav>
+    </section>
+</header>
+<!-- main content -->
+<main>
+    <!-- Main Navigation -->
+    <div class="nav-bg">
+        <nav class="main-navigation container">
+            <a href="#">Comidas</a>
+            <a href="#">Bebidas</a>
+            <a href="#">Postres</a>
+        </nav>
+    </div>
+    <!--  order summary -->
+    <section class="container">
+        <div class="order-summary">
+            <h2>Resumen de pedidos</h2>
+            <table id="order-table">
+                <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Aquí se agregarán las filas dinámicamente con JavaScript -->
+                </tbody>
+            </table>
+            <p id="total">Total: $0</p>
+        </div>
+        <!-- here was botton order <button class="boton" id="add-order-btn">Agregar</button>-->
+    </section>
+    <section class="container">
+        <div class="order-summary">
+            <h2>¿Que desea realizar?</h2>
+            <form class="form" action="#">
+                <fieldset>
+                    <div class="field-container"> <!-- field container. in case grid layout is used -->
+                        <div class="field">
+                            <label for="area-number">Área: </label>
+                            <input class="input-text" id="area-number" type="text" placeholder="Ingresa el área">
+                        </div>
+                        <div class="field">
+                            <label for="table-number">Mesa: </label>
+                            <input class="input-text" id="table-number" type="text"
+                                   placeholder="Ingresa el numero de mesa">
+                        </div>
+                        <div class="alinear-derecha flex">
+                            <button class="button">Ordenar</button>
+                            <button class="button colorb" id="delete-order-btn">Cancelar</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+</main>
+<script src="add_order.js"></script>
+<script src="hamburger_icon.js"></script>
+</body>
+</html>
+
