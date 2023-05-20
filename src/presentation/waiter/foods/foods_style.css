@@ -1,0 +1,36 @@
+@import "../common/main-style.css";
+
+.poc-chuc {
+    width: 15rem;
+    height: 10rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--white-color);
+    border-radius: .5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item input {
+    width: 50px;
+    padding: 5px;
+}
+
+.menu-item button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.top {
+    margin-top: 2rem;
+}
+
