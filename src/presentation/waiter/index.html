@@ -6,8 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Menu principal</title>
-    <link rel="preload" href="normalize.css" as="style">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="preload" href="common/normalize.css" as="style">
+    <link rel="stylesheet" href="common/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preload" href="styles.css" as="style">
     <link href="styles.css" rel="stylesheet">
@@ -25,7 +25,7 @@
         <img class="hamburger" src="assets/amburguesa.svg" alt="imagen">
         <nav class="navigation-menu">
             <a href="#">Usuario</a>
-            <a href="#">Menu</a>
+            <a href="index.html">Menu</a>
             <a href="#">Pedidos</a>
         </nav>
     </section>
@@ -35,7 +35,7 @@
     <!-- Main Navigation -->
     <div class="nav-bg">
         <nav class="main-navigation container">
-            <a href="#">Comidas</a>
+            <a href="foods/foods.html">Comidas</a>
             <a href="#">Bebidas</a>
             <a href="#">Postres</a>
         </nav>
@@ -75,7 +75,7 @@
                             <input class="input-text" id="table-number" type="text"
                                    placeholder="Ingresa el numero de mesa">
                         </div>
-                        <div class="alinear-derecha flex">
+                        <div class="align-right">
                             <button class="button">Ordenar</button>
                             <button class="button colorb" id="delete-order-btn">Cancelar</button>
                         </div>
@@ -86,7 +86,7 @@
     </section>
 </main>
 <script src="add_order.js"></script>
-<script src="hamburger_icon.js"></script>
+<script src="common/hamburger_icon.js"></script>
 </body>
 </html>
 
