@@ -16,4 +16,14 @@ loginForm.addEventListener('submit', async (event) => {
     if (response.error) {
         document.getElementById('error__message').innerHTML = response.error;
     }
+
+    if (response.token) {
+        // Save the token in the local storage
+        localStorage.setItem('token', response.token);
+    }
+
+    if (response.user.role === 'WAITER') {
+        // Redirect to the waiter page
+        window.location.href = '/src/presentation/waiter/index.html';
+    }
 });
