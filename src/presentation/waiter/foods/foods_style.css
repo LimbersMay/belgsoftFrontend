@@ -4,7 +4,7 @@ header {
     margin-bottom: 3rem;
 }
 
-.food-container {
+#food-container {
     max-width: 120rem;
     margin: 0 auto;
     border: .1rem solid var(--light-gray);
