@@ -13,7 +13,7 @@ import {createProductCard} from "./components/ProductCard.js";
     // check if url contains a query string
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const productType = urlParams.get('type');
+    const productType = urlParams.get('category');
 
     // set the title
     const title = document.querySelector('#product-title');
