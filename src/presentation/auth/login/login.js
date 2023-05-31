@@ -1,4 +1,4 @@
-import {authenticateUser} from "../../../domain/auth/auth.service";
+import {authenticateUser} from "../../../domain/auth/auth.service.js";
 
 const loginForm = document.getElementById('login-form');
 
@@ -24,6 +24,6 @@ loginForm.addEventListener('submit', async (event) => {
 
     if (response.user.role === 'WAITER') {
         // Redirect to the waiter page
-        window.location.href = '/src/presentation/waiter/index.html';
+        window.location.href = '/belgsoft-frontend/src/presentation/waiter/index.html';
     }
 });
