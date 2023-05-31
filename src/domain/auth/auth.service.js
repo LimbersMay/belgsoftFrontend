@@ -1,4 +1,4 @@
-import {login} from "../../data/auth/auth.repository";
+import {login} from "../../data/auth/auth.repository.js";
 
 export const authenticateUser = async (email, password) => {
 
