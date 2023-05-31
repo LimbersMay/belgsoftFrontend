@@ -7,7 +7,7 @@ import {createProductCard} from "./components/ProductCard.js";
     const titles = {
         'foods': 'Comida',
         'drinks': 'Bebida',
-        'dessert': 'Postre'
+        'desserts': 'Postre'
     }
 
     // check if url contains a query string
