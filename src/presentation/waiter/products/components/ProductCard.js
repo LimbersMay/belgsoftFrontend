@@ -1,7 +1,7 @@
 
-export const createProductCard = (title, imgUrl) => {
+export const createProductCard = (id, title, imgUrl) => {
     return `
-        <div class="food-container">
+        <div id="${id}" class="product-container">
             <section>
                 <h2>${title}</h2> <!-- with js -->
                 <div class="menu-item-with-grid">
@@ -10,7 +10,6 @@ export const createProductCard = (title, imgUrl) => {
                     <div class="element"><input class="input-text input-text2" id="input" type="text" value="0"></div>
                 </div>
             </section>
-            
         </div>
     `
 }
