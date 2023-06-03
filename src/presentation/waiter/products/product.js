@@ -1,6 +1,7 @@
 // we fetch data from the domain
-import {processProduct} from "../../../domain/waiter/process-product.js";
+import {processProductsFromApi} from "../../../domain/waiter/processProductsFromApi.js";
 import {createProductCard} from "./components/ProductCard.js";
+import {processProductsInCart} from "../../../domain/waiter/processProductsInCart.js";
 
 (async () => {
 
@@ -19,10 +20,10 @@ import {createProductCard} from "./components/ProductCard.js";
     const title = document.querySelector('#product-title');
     title.innerHTML = titles[productType];
 
-    const foods = await processProduct(productType);
+    const products = await processProductsFromApi(productType);
     const foodContainer = document.querySelector('.products-container');
 
-    foods.forEach(({ menuId, name, image })=> {
+    products.forEach(({ menuId, name, image })=> {
         const foodCard = createProductCard(menuId, name, image);
 
         // insert before the end of the container
@@ -30,5 +31,40 @@ import {createProductCard} from "./components/ProductCard.js";
     });
 })();
 
+const saveProducts = () => {
+    const productsElements = document.getElementsByClassName('product-container');
+
+    /*
+        productsToSaveStructure = [
+            {
+                menuId: 'Menu-id-from-backend',
+                quantity: 2
+            }
+
+        ]
+
+     */
+
+    const productsToSave = [
+
+    ]
+
+    for (let productsElement of productsElements) {
+
+        const quantity = productsElement.querySelector('.quantity').value;
+        const menuId = productsElement.id;
+
+        productsToSave.push(
+            {
+                menuId,
+                quantity
+            }
+        )
+    }
+
+    const result = processProductsInCart(productsToSave);
+}
+
 const saveButton = document.querySelector('#save-btn');
+saveButton.addEventListener('click', saveProducts);
 
