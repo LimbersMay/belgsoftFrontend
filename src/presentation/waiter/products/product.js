@@ -20,12 +20,15 @@ import {createProductCard} from "./components/ProductCard.js";
     title.innerHTML = titles[productType];
 
     const foods = await processProduct(productType);
-    const foodContainer = document.querySelector('.product-container');
+    const foodContainer = document.querySelector('.products-container');
 
-    foods.forEach(food => {
-        const foodCard = createProductCard(food.name, food.image);
+    foods.forEach(({ menuId, name, image })=> {
+        const foodCard = createProductCard(menuId, name, image);
 
         // insert before the end of the container
         foodContainer.insertAdjacentHTML('afterbegin', foodCard);
     });
 })();
+
+const saveButton = document.querySelector('#save-btn');
+
