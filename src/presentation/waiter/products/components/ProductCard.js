@@ -1,7 +1,7 @@
 
-export const createProductCard = (id, title, imgUrl) => {
+export const createProductCard = ({id, title, imgUrl, price}) => {
     return `
-        <div id="${id}" class="product-container">
+        <div id="${id}" class="product-container" data-title="${title}" data-price="${price}">
             <section>
                 <h2>${title}</h2> <!-- with js -->
                 <div class="menu-item-with-grid">
