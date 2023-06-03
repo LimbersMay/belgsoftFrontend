@@ -1,5 +1,5 @@
 /** Work in progress **/
-import {getProductInCartById, getProductsInCart} from "../../domain/waiter/getProductsInCart.js";
+import {getProductsInCart} from "../../domain/waiter/getProductsInCart.js";
 import {createProductListItem} from "./components/ProductItem.js";
 
 (async () => {
@@ -11,8 +11,7 @@ import {createProductListItem} from "./components/ProductItem.js";
 
     let total = 0;
 
-    for (const {menuId, title, price} of productsInCart) {
-        const { quantity } = await getProductInCartById(menuId);
+    for (const {title, price, quantity} of productsInCart) {
         const productListItem = createProductListItem(title, quantity, price);
 
         total += price * quantity;
