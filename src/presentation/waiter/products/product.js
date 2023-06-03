@@ -23,8 +23,8 @@ import {processProductsInCart} from "../../../domain/waiter/processProductsInCar
     const products = await processProductsFromApi(productType);
     const foodContainer = document.querySelector('.products-container');
 
-    products.forEach(({ menuId, name, image })=> {
-        const foodCard = createProductCard(menuId, name, image);
+    products.forEach(({price, menuId, name, image })=> {
+        const foodCard = createProductCard({id: menuId, imgUrl: image, title: name, price});
 
         // insert before the end of the container
         foodContainer.insertAdjacentHTML('afterbegin', foodCard);
@@ -52,12 +52,17 @@ const saveProducts = async () => {
     for (let productsElement of productsElements) {
 
         const quantity = productsElement.querySelector('.quantity').value;
+
         const menuId = productsElement.id;
+        const price = productsElement.dataset.price;
+        const title = productsElement.dataset.title;
 
         productsToSave.push(
             {
                 menuId,
-                quantity
+                quantity,
+                price,
+                title
             }
         )
     }
