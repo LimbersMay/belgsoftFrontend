@@ -31,7 +31,7 @@ import {processProductsInCart} from "../../../domain/waiter/processProductsInCar
     });
 })();
 
-const saveProducts = () => {
+const saveProducts = async () => {
     const productsElements = document.getElementsByClassName('product-container');
 
     /*
@@ -62,7 +62,7 @@ const saveProducts = () => {
         )
     }
 
-    const result = processProductsInCart(productsToSave);
+    await processProductsInCart(productsToSave);
 }
 
 const saveButton = document.querySelector('#save-btn');
