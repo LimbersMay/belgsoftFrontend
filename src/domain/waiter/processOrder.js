@@ -1,9 +1,9 @@
-import {getProductsInCart} from "./getProductsInCart.js";
+import {getProductsInOrder} from "./getProductsInOrder.js";
 import {saveOrder} from "../../data/waiter/saveOrder.repository.js";
 
 export const processOrder = async (areaId, tableId) => {
 
-    const productsInCart = await getProductsInCart();
+    const productsInCart = await getProductsInOrder();
 
     if (!productsInCart) return;
 

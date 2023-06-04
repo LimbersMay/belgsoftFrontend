@@ -1,6 +1,6 @@
-import {persistProductsInCart} from "../../data/waiter/persistProductsInCart.repository.js";
+import {persistProductsInCart} from "../../data/waiter/persistProductsInOrder.repository.js";
 
-export const processProductsInCart = async (products = []) => {
+export const processProductsInOrder = async (products = []) => {
     /*
         products = [
             {

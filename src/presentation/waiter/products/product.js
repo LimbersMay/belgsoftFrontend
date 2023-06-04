@@ -1,7 +1,7 @@
 // we fetch data from the domain
 import {processProductsFromApi} from "../../../domain/waiter/processProductsFromApi.js";
 import {createProductCard} from "./components/ProductCard.js";
-import {processProductsInCart} from "../../../domain/waiter/processProductsInCart.js";
+import {processProductsInOrder} from "../../../domain/waiter/processProductsInOrder.js";
 
 (async () => {
 
@@ -67,7 +67,7 @@ const saveProducts = async () => {
         )
     }
 
-    await processProductsInCart(productsToSave);
+    await processProductsInOrder(productsToSave);
 }
 
 const saveButton = document.querySelector('#save-btn');
