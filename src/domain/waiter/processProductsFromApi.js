@@ -1,4 +1,4 @@
-import {getProductById, getProductsRepository} from "../../data/waiter/getProducts.repository.js";
+import {getProductById, getProducts} from "../../data/waiter/getProducts.js";
 
 
 export const processProductsFromApi = async (productName) => {
@@ -7,7 +7,7 @@ export const processProductsFromApi = async (productName) => {
     const token = localStorage.getItem('token');
 
     // We get the foods from the data
-    return await getProductsRepository(token, productName);
+    return await getProducts(token, productName);
 }
 
 export const processProductFromApi = async (productId) => {
