@@ -10,5 +10,13 @@ export const processOrderToPrint = async (areaTitle, tableTitle) => {
         product.title, product.quantity
     ]));
 
-    printOrder(token, productsToPrint, areaTitle, tableTitle);
+    const response = await printOrder(token, productsToPrint, areaTitle, tableTitle);
+
+    if (response.errors) {
+        console.error(response.message);
+        console.log(response.errors)
+        return {
+            error: response.message
+        }
+    }
 }
