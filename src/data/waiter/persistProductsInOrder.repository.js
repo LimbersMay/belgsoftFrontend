@@ -1,7 +1,7 @@
 
 export const persistProductsInCart = async (products) => {
 
-    const productsFromLocalStorage = JSON.parse(localStorage.getItem("productsInCart"));
+    const productsFromLocalStorage = JSON.parse(localStorage.getItem("productsInOrder"));
 
     if (!productsFromLocalStorage) {
         localStorage.setItem("productsInOrder", JSON.stringify(products));
