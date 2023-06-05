@@ -24,6 +24,6 @@ loginForm.addEventListener('submit', async (event) => {
 
     if (response.user.role === 'WAITER') {
         // Redirect to the waiter page
-        window.location.href = '../../waiter/order-summary.html';
+        window.location.href = 'src/presentation/waiter/order-summary.html';
     }
 });
