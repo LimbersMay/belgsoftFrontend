@@ -1,23 +1,24 @@
 /** Work in progress **/
-import {getProductsInCart} from "../../domain/waiter/getProductsInCart.js";
+import {getProductsInOrder} from "../../domain/waiter/getProductsInOrder.js";
 import {createProductListItem} from "./components/ProductItem.js";
 import {processAreas} from "../../domain/waiter/processAreas.js";
 import {createSelectOption} from "./components/SelectOption.js";
 import {processTables} from "../../domain/waiter/processTables.js";
-import {processCleanProductsInCart} from "../../domain/waiter/cleanProductsInCart.js";
+import {processCleanProductsInCart} from "../../domain/waiter/cleanProductsInOrder.js";
 import {processOrder} from "../../domain/waiter/processOrder.js";
+import {processOrderToPrint} from "../../domain/waiter/process-order-to-print.js";
 
 // Load the orders from localStorage
 (async () => {
 
-    const productsInCart = await getProductsInCart();
-    if (!productsInCart) return;
+    const productsInOrder = await getProductsInOrder();
+    if (!productsInOrder) return;
 
     const productsListContainer = document.querySelector('#productsList');
 
     let total = 0;
 
-    for (const {title, price, quantity} of productsInCart) {
+    for (const {title, price, quantity} of productsInOrder) {
         const productListItem = createProductListItem(title, quantity, price);
 
         total += price * quantity;
@@ -67,12 +68,19 @@ import {processOrder} from "../../domain/waiter/processOrder.js";
 const saveOrder = async (event) => {
     event.preventDefault();
 
-    const tableId = document.querySelector('#table-number').value;
-    const areaId = document.querySelector("#area-number").value;
+    const tableId = document.querySelector('#table-number');
+    const areaId = document.querySelector("#area-number");
 
+    const areaTitle = areaId.options[areaId.selectedIndex].text
+    const tableTitle = tableId.options[tableId.selectedIndex].text
+
+    // send the order to the server
     await processOrder(areaId, tableId);
 
-    // clean the products in cart
+    // request print the order details
+    await processOrderToPrint(areaTitle, tableTitle);
+
+    // clean the products in order
     await processCleanProductsInCart();
 
     // clean the list container
