@@ -51,10 +51,10 @@ const saveProducts = async () => {
 
     for (let productsElement of productsElements) {
 
-        const quantity = productsElement.querySelector('.quantity').value;
+        const quantity = parseInt(productsElement.querySelector('.quantity').value);
 
         const menuId = productsElement.id;
-        const price = productsElement.dataset.price;
+        const price = parseInt(productsElement.dataset.price);
         const title = productsElement.dataset.title;
 
         productsToSave.push(
