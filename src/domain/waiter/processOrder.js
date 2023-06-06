@@ -12,8 +12,16 @@ export const processOrder = async (areaId, tableId) => {
     const response = await saveOrder(token, areaId, tableId, productsInCart);
 
     if (response.error) {
+        console.log(response.error)
         return {
             error: response.error
+        }
+    }
+
+    if (response.errors) {
+        console.log(response.errors)
+        return {
+            error: response.errors
         }
     }
 
