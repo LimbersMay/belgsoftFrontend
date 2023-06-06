@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="preload" href="../styles.css" as="style">
+    <link href="../styles.css" rel="stylesheet">
+    <link rel="preload" href="style_order.css" as="style">
+    <link href="style_order.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Orden</h1>
+    </header>
+    <main>
+        <section class="container">
+            <div class="order-summary">
+                <h2>Detalles</h2>
+                <hr>
+                <div class="grid2">
+                    <p class="table">Mesa: <span>3</span></p>
+                    <p class="area">Area: <span>Palapa</span></p>
+                </div>
+                <table id="order-table">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productsList">
+                    </tbody>
+                </table>
+                <p id="total">Total: $0</p>
+                <h2>¿Que desea realizar?</h2>
+                <form class="form" action="#">
+                    <fieldset>
+                        <div class="field-container"> <!-- field container. in case grid layout is used -->
+                            <div class="align-right">
+                                <button class="button">Cobrar</button>
+                                <button class="button colorb" id="delete-order-btn">Cancelar</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
