@@ -136,7 +136,7 @@ h1 span {
     background-color: var(--secondary-color);
     color: var(--white-color);
     padding: 1rem 3rem;
-    margin-top: 1rem;
+    margin-top: .4rem;
     font-size: 2rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -150,24 +150,22 @@ h1 span {
 
 @media (min-width: 768px) {
     .button {
-        width: auto;
+        width: 17rem;/**auto**/
     }
 }
 
 .button:hover {
     cursor: pointer;
-    background-color: var(--secondary-color);
-    color: var(--black-gray-color);
+    color: var(--light-gray);
 }
 
 /** Only for cancel buttons **/
 .colorb {
-    background-color: var(--primary-color2);
+    background-color: var(--gray);
 }
 
 .colorb:hover {
     cursor: pointer;
-    background-color: var(--primary-color2);
-    color: var(--black-gray-color);
+    color: var(--light-gray);
 }
 

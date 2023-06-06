@@ -1,0 +1,178 @@
+@import "../common/main-style.css";
+
+#order {
+    text-align: center;
+}
+
+.waiter {
+    margin-left: 5.2rem;
+}
+
+p {
+    color: var(--black-gray-color);
+    font-weight: bold;
+}
+
+span {
+    font-weight: normal;
+}
+
+.order-container {
+    max-width: 110rem;
+    margin: 2rem auto 1rem auto;
+    border: .1rem solid var(--light-gray);
+    border-radius: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.order-container2 {
+    max-width: 100rem;
+    margin: 2rem auto 1rem auto;
+    border: .1rem solid var(--light-gray);
+    border-radius: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.card{
+    max-width: 90rem;
+    margin: 2rem auto 1rem auto;
+    border: .1rem solid var(--light-gray);
+    border-radius: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+hr {
+    border: .1rem solid var(--light-gray);
+    padding: .1rem;
+    background-color: var(--light-gray);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.button1 {
+    display: inline-block;
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin: 5px;
+}
+
+/* Styles for small screens */
+@media (max-width: 768px) {
+    .waiter {
+        margin-left: auto;
+        text-align: center;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-gap: 1rem;
+        text-align: center;
+    }
+
+    .table-area,
+    .product-total {
+        display: grid;
+        place-items: center;
+        row-gap: .3rem;
+    }
+
+    .l {
+        display: block;
+        justify-content: center;
+    }
+}
+
+/* Styles for medium and large screens */
+@media (min-width: 769px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .event {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-gap: 1rem;
+    }
+
+    .table-area,
+    .product-total {
+        display: grid;
+        place-items: center;
+        row-gap: .3rem;
+    }
+}
+
+
+.button1 {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 1.1rem 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+
+@media (min-width: 768px) {
+    .button1 {
+        width: auto;
+    }
+}
+
+.button1:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: var(--light-gray);
+}
+
+.colorbb {
+    background-color: var(--primary-color2);
+}
+
+.colorbb:hover {
+    cursor: pointer;
+    background-color: var(--primary-color2);
+    color: var(--light-gray);
+}
+
+/*Este codigo le pertenece a details.html*/
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Crea dos columnas de igual tamaño */
+    gap: 10px; /* Espacio entre los elementos de la rejilla */
+}
+
+/* Estilos adicionales para los elementos */
+.table,
+.area {
+    display: grid;
+    justify-items: center; /* horizontalmente */
+    align-content: center; /* verticalmente */
+    border: .1rem solid var(--light-gray);
+    /*background-color: var(--primary-color);*/
+    text-align: center;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+
+
+
+
