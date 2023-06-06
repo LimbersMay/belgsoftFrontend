@@ -154,18 +154,16 @@ h1 span {
 
 .button:hover {
     cursor: pointer;
-    background-color: var(--secondary-color);
-    color: var(--black-gray-color);
+    color: var(--light-gray);
 }
 
 /** Only for cancel buttons **/
 .colorb {
-    background-color: var(--primary-color2);
+    background-color: var(--gray);
 }
 
 .colorb:hover {
     cursor: pointer;
-    background-color: var(--primary-color2);
-    color: var(--black-gray-color);
+    color: var(--light-gray);
 }
 
