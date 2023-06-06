@@ -68,11 +68,14 @@ import {processOrderToPrint} from "../../domain/waiter/process-order-to-print.js
 const saveOrder = async (event) => {
     event.preventDefault();
 
-    const tableId = document.querySelector('#table-number');
-    const areaId = document.querySelector("#area-number");
+    const tableElement = document.querySelector('#table-number');
+    const areaElement = document.querySelector("#area-number");
 
-    const areaTitle = areaId.options[areaId.selectedIndex].text
-    const tableTitle = tableId.options[tableId.selectedIndex].text
+    const areaTitle = areaElement.options[areaElement.selectedIndex].text
+    const tableTitle = tableElement.options[tableElement.selectedIndex].text
+
+    const tableId = tableElement.value;
+    const areaId = areaElement.value;
 
     // send the order to the server
     await processOrder(areaId, tableId);
