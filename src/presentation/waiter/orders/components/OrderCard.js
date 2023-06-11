@@ -1,7 +1,7 @@
 
-export const createOrderCard = (area, tableNumber, orderStatus, waiterName, productQuantity, check) => {
+export const createOrderCard = (area, tableNumber, orderStatus, waiterName, productQuantity, check, tableId) => {
     return `
-        <div  class="container order-container">   
+        <div class="container order-container">   
             <p id="order">Area: <span>${area}</span></p>
             <hr>
             <p class="waiter">Mesero: <span>${waiterName}</span></p>
@@ -15,7 +15,7 @@ export const createOrderCard = (area, tableNumber, orderStatus, waiterName, prod
                     <p id="total">Total: <span>${check}</span></p>
                 </div>
                 <div class="event l">
-                    <a class="button1" href="details.html">Detalles</a>
+                    <a class="button1" href="details.html?tableName=${tableNumber}&area=${area}&tableId=${tableId}"">Detalles</a>
                     <a class="button1 colorbb" href="#">Solicitar cancelación</a>
                 </div>
             </div>
